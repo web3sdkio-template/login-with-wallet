@@ -1,4 +1,4 @@
-import { ThirdwebSDK } from "@thirdweb-dev/sdk";
+import { Web3sdkioSDK } from "@web3sdkio/sdk";
 import { NextApiRequest, NextApiResponse } from "next";
 
 const authenticate = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -24,10 +24,10 @@ const authenticate = async (req: NextApiRequest, res: NextApiResponse) => {
     })
   }
 
-  const sdk = ThirdwebSDK.fromPrivateKey(process.env.ADMIN_PRIVATE_KEY as string, "mainnet");
+  const sdk = Web3sdkioSDK.fromPrivateKey(process.env.ADMIN_PRIVATE_KEY as string, "mainnet");
 
   // Authenticate token with the SDK
-  const domain = "thirdweb.com"
+  const domain = "web3sdk.io"
   const address = await sdk.auth.authenticate(domain, token);
 
   res.status(200).json(address);

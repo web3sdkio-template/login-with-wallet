@@ -1,7 +1,7 @@
 ## Login with Wallet
 
 This project demonstrates how to setup a wallet-based authentication flow compliant with the
-[sign-in with ethereum](https://eips.ethereum.org/EIPS/eip-4361) spec via the thirdweb SDK. It enables users to securely sign in to any backend service using just their wallet.
+[sign-in with ethereum](https://eips.ethereum.org/EIPS/eip-4361) spec via the web3sdkio SDK. It enables users to securely sign in to any backend service using just their wallet.
 
 ## Getting Started
 
@@ -15,17 +15,17 @@ This repository has multiple different examples showing how to implement this fl
 
 ## Learn More
 
-To learn more about thirdweb and the authentication SDk, checkout the following resources:
+To learn more about web3sdkio and the authentication SDk, checkout the following resources:
 
-- [Auth Documentation](https://portal.thirdweb.com/building-web3-apps/authenticating-users) - learn about thirdweb authentication.
-- [React Documentation](https://docs.thirdweb.com/react) - learn about our React SDK.
-- [TypeScript Documentation](https://docs.thirdweb.com/typescript) - learn about our TypeScript SDK.
-- [Python Documentation](https://docs.thirdweb.com/python) - learn about our Python SDK.
-- [Go Documentation](https://docs.thirdweb.com/go) - learn about our Go SDK.
-- [Portal](https://docs.thirdweb.com) - check our guides and development resources.
+- [Auth Documentation](https://docs.web3sdk.io/building-web3-apps/authenticating-users) - learn about web3sdkio authentication.
+- [React Documentation](https://docs.web3sdk.io/react) - learn about our React SDK.
+- [TypeScript Documentation](https://docs.web3sdk.io/typescript) - learn about our TypeScript SDK.
+- [Python Documentation](https://docs.web3sdk.io/python) - learn about our Python SDK.
+- [Go Documentation](https://docs.web3sdk.io/go) - learn about our Go SDK.
+- [Portal](https://docs.web3sdk.io) - check our guides and development resources.
 
-You can check out [the thirdweb GitHub organization](https://github.com/thirdweb-dev) - your feedback and contributions are welcome!
+You can check out [the web3sdkio GitHub organization](https://github.com/web3sdkio) - your feedback and contributions are welcome!
 
 ## Join our Discord!
 
-For any questions, suggestions, join our discord at [https://discord.gg/thirdweb](https://discord.gg/thirdweb).
+For any questions, suggestions, join our discord at [https://discord.gg/n33UhsfUKB](https://discord.gg/n33UhsfUKB).

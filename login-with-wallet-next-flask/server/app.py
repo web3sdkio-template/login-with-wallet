@@ -1,6 +1,6 @@
 from flask import Flask, request, make_response, jsonify
-from thirdweb.types import LoginPayload
-from thirdweb import ThirdwebSDK
+from web3sdkio.types import LoginPayload
+from web3sdkio import Web3sdkioSDK
 from datetime import datetime, timedelta
 import os
 
@@ -13,11 +13,11 @@ def login():
         print("Missing ADMIN_PRIVATE_KEY environment variable")
         return "Admin private key not set", 400
 
-    sdk = ThirdwebSDK.from_private_key(private_key, "mumbai")
+    sdk = Web3sdkioSDK.from_private_key(private_key, "mumbai")
     payload = LoginPayload.from_json(request.json["payload"])
 
     # Generate an access token with the SDK using the signed payload
-    domain = "thirdweb.com"
+    domain = "web3sdk.io"
     token = sdk.auth.generate_auth_token(domain, payload)
 
     res = make_response()
@@ -38,14 +38,14 @@ def authenticate():
         print("Missing ADMIN_PRIVATE_KEY environment variable")
         return "Admin private key not set", 400
 
-    sdk = ThirdwebSDK.from_private_key(private_key, "mumbai")
+    sdk = Web3sdkioSDK.from_private_key(private_key, "mumbai")
 
     # Get access token off cookies
     token = request.cookies.get("access_token")
     if not token:
         return "Unauthorized", 401
     
-    domain = "thirdweb.com"
+    domain = "web3sdk.io"
 
     try:
         address = sdk.auth.authenticate(domain, token)
