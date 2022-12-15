@@ -1,7 +1,7 @@
-import { Web3sdkioSDK } from "@web3sdkio/sdk";
+import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import { NextApiRequest, NextApiResponse } from "next";
 import { serialize } from "cookie";
-import { LoginPayload } from "@web3sdkio/sdk/dist/src/schema";
+import { LoginPayload } from "@thirdweb-dev/sdk/dist/src/schema";
 
 const login = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== "POST") {
@@ -18,7 +18,7 @@ const login = async (req: NextApiRequest, res: NextApiResponse) => {
     })
   }
 
-  const sdk = Web3sdkioSDK.fromPrivateKey(process.env.ADMIN_PRIVATE_KEY as string, "mainnet");
+  const sdk = ThirdwebSDK.fromPrivateKey(process.env.ADMIN_PRIVATE_KEY as string, "mainnet");
   
   // Get signed login payload from the frontend
   const payload = req.body.payload as LoginPayload;
@@ -29,7 +29,7 @@ const login = async (req: NextApiRequest, res: NextApiResponse) => {
   }  
 
   // Generate an access token with the SDK using the signed payload
-  const domain = "web3sdk.io"
+  const domain = "thirdweb.com"
   const token = await sdk.auth.generateAuthToken(domain, payload);
 
   // Securely set httpOnly cookie on request to prevent XSS on frontend

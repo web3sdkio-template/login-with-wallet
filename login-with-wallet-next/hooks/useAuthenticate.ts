@@ -1,7 +1,7 @@
-import { useSDK } from "@web3sdkio/react";
+import { useSDK } from "@thirdweb-dev/react";
 
 export default function useAuthenticate() {
-  const domain = "web3sdk.io";
+  const domain = "thirdweb.com";
   const sdk = useSDK();
 
   async function login() {
